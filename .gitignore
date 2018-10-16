@@ -1,0 +1,24 @@
+# ignroe mac
+.DS_Store
+
+# intelj
+.idea
+*.iml
+
+# Eclipse
+/settings
+.classpath
+.project
+
+# gradle
+.gradle
+/build
+/out
+
+# maven
+/target
+
+# src
+/src/main/**
+
+
