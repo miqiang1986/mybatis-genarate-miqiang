@@ -52,18 +52,18 @@ public class GeneratorSqlmap {
 	Map<String, String> pathMap = new HashMap<String, String>();
 	{
 		// 生成的实体类存放目录
-        entityPath = "com.yunzainfo.eagle.finch.footer.entity";
+        entityPath = "com.yunzainfo.eagle.finch.antelope.entity";
 		pathMap.put("entityfile.package", entityPath);
 		// 生成的mapper接口文件存放目录
-		pathMap.put("xmlmapperfile.package", "com.yunzainfo.eagle.finch.footer.mapper");
+		pathMap.put("xmlmapperfile.package", "com.yunzainfo.eagle.finch.antelope.mapper");
 		// 生成的xml文件存放目录
-		pathMap.put("xmlfile.package", "main/resources/footer");
+		pathMap.put("xmlfile.package", "main/resources/antelope");
 	}
 	// 数据库表和实体类对应。key为数据库表，value为实体类名称
 	Map<String, String> tableMap = new HashMap<String, String>();
 	{
 		// 设置数据库表和实体类对应.key为数据库表，value为实体类名称
-		tableMap.put("tab_jsxx", "Jsxx");
+		tableMap.put("tab_jxbjxfdsksj", "Jxbjxfdsksj");
 	}
 
 	/**
