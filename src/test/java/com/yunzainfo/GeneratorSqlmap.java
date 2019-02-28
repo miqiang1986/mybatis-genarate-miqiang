@@ -49,21 +49,21 @@ public class GeneratorSqlmap {
 	 * 常修改参数
 	 */
 	// 文件路径信息
-	Map<String, String> pathMap = new HashMap<String, String>();
+	Map<String, String> pathMap = new HashMap<>();
 	{
 		// 生成的实体类存放目录
-        entityPath = "com.yunzainfo.eagle.finch.antelope.entity";
+        entityPath = "com.yunzainfo.eagle.finch.thirdparty.entity";
 		pathMap.put("entityfile.package", entityPath);
 		// 生成的mapper接口文件存放目录
-		pathMap.put("xmlmapperfile.package", "com.yunzainfo.eagle.finch.antelope.mapper");
+		pathMap.put("xmlmapperfile.package", "com.yunzainfo.eagle.finch.thirdparty.mapper");
 		// 生成的xml文件存放目录
-		pathMap.put("xmlfile.package", "main/resources/antelope");
+		pathMap.put("xmlfile.package", "main/resources/thirdparty");
 	}
 	// 数据库表和实体类对应。key为数据库表，value为实体类名称
-	Map<String, String> tableMap = new HashMap<String, String>();
+	Map<String, String> tableMap = new HashMap<>();
 	{
 		// 设置数据库表和实体类对应.key为数据库表，value为实体类名称
-		tableMap.put("tab_jxbjxfdsksj", "Jxbjxfdsksj");
+		tableMap.put("DZ_BT_GRADE_LOG", "GradeLog");
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class GeneratorSqlmap {
 		if (oldStr.contains(replaceStr)) {
 			StringBuilder sb = new StringBuilder();
 			int start = oldStr.indexOf(replaceStr);
-			sb.append(oldStr.substring(0, start));
+			sb.append(oldStr, 0, start);
 			sb.append(newStr);
 			sb.append(oldStr.substring(start + replaceStr.length()));
 			if (replaceAll) {

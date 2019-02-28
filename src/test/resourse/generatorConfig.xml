@@ -5,7 +5,7 @@
 <generatorConfiguration>
 
     <!--数据库jar包-->
-    <classPathEntry location="/Users/miqiang/.m2/repository/com/oracle/ojdbc14/10.2.0.4.0/ojdbc14-10.2.0.4.0.jar"/>
+    <classPathEntry location="/Users/miqiang/.gradle/caches/modules-2/files-2.1/com.oracle/ojdbc6/12.1.0.1-atlassian-hosted/5d5d3e7a6b217ddc0c1c4c6d14b352e8b04453ef/ojdbc6-12.1.0.1-atlassian-hosted.jar"/>
     <context id="DB2Tables"    targetRuntime="MyBatis3">
 
         <!--使用自定义的类DG2CommentGenerator-->
@@ -18,9 +18,9 @@
 
         <!--数据库链接地址账号密码-->
         <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
-                        connectionURL="jdbc:oracle:thin:@222.30.194.184:1521:PORTALDB"
-            userId="jiaowu"
-            password="eaglesxyxxh6">
+                        connectionURL="jdbc:oracle:thin:@222.30.195.23:1521:PORTALDB"
+            userId="workflow"
+            password="111111">
         </jdbcConnection>
 
         <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer;
@@ -31,7 +31,7 @@
 
 
         <!--生成Model类存放位置-->
-        <javaModelGenerator targetPackage="com.yunzainfo.eagle.finch.antelope.entity" targetProject="src/main/java">
+        <javaModelGenerator targetPackage="com.yunzainfo.eagle.finch.thirdparty.entity" targetProject="src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
             <property name="enableSubPackages" value="true" />
             <!-- 清理前后的空格 -->
@@ -39,12 +39,12 @@
         </javaModelGenerator>
 
         <!--生成映射文件存放位置-->
-        <sqlMapGenerator targetPackage="main/resources/antelope" targetProject="src">
+        <sqlMapGenerator targetPackage="main/resources/thirdparty" targetProject="src">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
 
         <!--生成Dao类存放位置-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.yunzainfo.eagle.finch.antelope.mapper" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.yunzainfo.eagle.finch.thirdparty.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
@@ -65,7 +65,7 @@
         <!--</table>-->
 
         
-		<table tableName="tab_jxbjxfdsksj" domainObjectName="Jxbjxfdsksj"  selectByExampleQueryId="false"  enableDeleteByExample="false"  enableCountByExample="false"  enableUpdateByExample="false"  enableSelectByExample="false"  />
+		<table tableName="DZ_BT_GRADE_LOG" domainObjectName="GradeLog"  selectByExampleQueryId="false"  enableDeleteByExample="false"  enableCountByExample="false"  enableUpdateByExample="false"  enableSelectByExample="false"  />
 
 
     </context>
